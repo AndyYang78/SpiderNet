@@ -10,10 +10,9 @@
             http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd
             http://www.springframework.org/schema/context 
             http://www.springframework.org/schema/context/spring-context-4.2.xsd">
-
 	<!-- 使Spring支持自动检测组件，如注解的Controller -->
 	<mvc:annotation-driven/>
-	<context:component-scan base-package="com.weibo.dashboard.controller" />
+	<context:component-scan base-package="com.spidernet.dashboard.controller" />
 	<bean id="mappingJacksonHttpMessageConverter"  
         class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">  
         <property name="supportedMediaTypes">  
@@ -33,5 +32,10 @@
             </list>  
         </property>  
     </bean>  
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView"></property>
+		<property name="prefix" value="/WEB-INF/pages/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
 	
 </beans>

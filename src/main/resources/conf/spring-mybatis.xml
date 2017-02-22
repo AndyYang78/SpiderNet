@@ -10,7 +10,7 @@
 			http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
 
     <!-- 自动扫描的包 ,将带有注解的类 纳入spring容器管理 -->
-    <context:component-scan base-package="com.weibo"></context:component-scan>
+    <context:component-scan base-package="com.spidernet"></context:component-scan>
 
     <!-- 引入jdbc配置文件 -->
     <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
@@ -40,7 +40,7 @@
 
     <!-- spring与mybatis整合配置，扫描所有dao -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-    	<property name="basePackage" value="com.weibo.dashboard.dao"/>
+    	<property name="basePackage" value="com.spidernet.dashboard.dao"/>
     	<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
     </bean>
 

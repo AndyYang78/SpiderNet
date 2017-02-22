@@ -1,4 +1,4 @@
-package com.weibo.util;
+package com.spidernet.util;
 
 public class ResponseData {
 	public Object data;
